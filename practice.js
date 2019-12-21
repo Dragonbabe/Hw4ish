@@ -1,38 +1,22 @@
 
 
-const start = document.getElementById("start");
+var start = document.getElementById("start");
 
-const quiz = document.getElementById("quiz");
+var timer = document.getElementById("timer");
 
-const qimg = document.getElementById("questionImage");
+var highscore = document.getElementById("highscore");
 
-const questionsElements = document.getElementById("question");
+// const question = document.getElementById("question");
 
-const counter = document.getElementById("counter");
+var counter = document.getElementById("counter");
 
-const timeGauge = document.getElementById("timeGauge");
+var scoreContainer = document.getElementById("scoreContainer");
 
-const choiceA = document.getElementById("A");
-
-const choiceB = document.getElementById("B");
-
-const choiceC = document.getElementById("C");
-
-const choiceD = document.getElementById("C");
-
-const progress = document.getElementById("progress");
-
-const scoreContainer = document.getElementById("scoreContainer");
-
-let lastQuestionIndex = questions.length - 1;
-// 10 seconds for every question
-const questionTime = 10;
-
-const gaugeWidth = 150;
+let lastQuestionIndex = question.length;
+// 15 seconds for every question
+const questionTime = 15;
 
 let count = 0;
-
-const gaugeProgressUnit = gaugeWidth / questionTime;
 
 function counterRender() {
     if (count <= questionTime) {
@@ -51,6 +35,7 @@ function counterRender() {
         }
     }
 }
+counterRender();
 let TIMER =
     setInterval(counterRender, 1000);
 
@@ -78,23 +63,27 @@ function renderQuestion() {
         document.getElementById(runningQuestionIndex).style.backgroundColor = "magenta";
     }
 }
-    let score = 0;
-    function checkAnswer(answer) {
-        if(questions[runningQuestionIndex].correct == answer){
-            score++;
-            answerIsCorrect();
-        }else{
-            answerIsWrong();
-        }
-        if(runningQuestionIndex < lastQuestionIndex){
-            count = 0;
-            runningQuestionIndex++;
-            questionRender();
-        }else{
-            clearInterval(TIMER);
-            scoreRender();
-        }
-        }
+let score = 0;
+function checkAnswer(answer) {
+    if (questions[runningQuestionIndex].correct == answer) {
+        score++;
+        answerIsCorrect();
+    } else {
+        answerIsWrong();
+    }
+    if (runningQuestionIndex < lastQuestionIndex) {
+        count = 0;
+        runningQuestionIndex++;
+        questionRender();
+    } else {
+        clearInterval(TIMER);
+        scoreRender();
+    }
+}
+
+start.addEventListener('click', function(){
+    console.log('hello');
+});
 
 
 
