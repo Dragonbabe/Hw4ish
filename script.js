@@ -51,6 +51,11 @@ function counterRender() {
         }
     }
 }
+let TIMER =
+    setInterval(counterRender, 1000);
+
+clearInterval(TIMER);
+
 
 let runningQuestionIndex = 0;
 function renderQuestion() {
@@ -73,6 +78,24 @@ function renderQuestion() {
         document.getElementById(runningQuestionIndex).style.backgroundColor = "magenta";
     }
 }
+    let score = 0;
+    function checkAnswer(answer) {
+        if(questions[runningQuestionIndex].correct == answer){
+            score++;
+            answerIsCorrect();
+        }else{
+            answerIsWrong();
+        }
+        if(runningQuestionIndex < lastQuestionIndex){
+            count = 0;
+            runningQuestionIndex++;
+            questionRender();
+        }else{
+            clearInterval(TIMER);
+            scoreRender();
+        }
+        }
+
 
 
 let questions = [{
@@ -132,6 +155,9 @@ let questions = [{
     correct: "A",
 
 },
+start.addEventListener('click', startQuiz )
+
+
 
 
 
@@ -147,7 +173,7 @@ let questions = [{
 
 
 ]
- [{
+[{
     prompt: "What color are Friesians?\n(a) Bay/Chestnut (b) Pinto\n\(c) Black",
     answer: "c"
 },
@@ -158,10 +184,10 @@ let questions = [{
     answer: "d"
 },
 
-{
-    prompt: "What color are cows?\n(a) Black\n(b) White\n(c) Black and white",
-    answer: "c"
-}]
+    {
+        prompt: "What color are cows?\n(a) Black\n(b) White\n(c) Black and white",
+        answer: "c"
+    }]
 var score = 0;
 for (var i = 0; i < questions.length; i++) {
     var response = window.prompt(questions[i].prompt);
