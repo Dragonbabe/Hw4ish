@@ -1,3 +1,4 @@
+// Created variables needed for the project
 var start = document.getElementById("start");
 
 var timer = document.getElementById("timer");
@@ -24,15 +25,11 @@ const questionTime = 15;
 var count = 0;
 
 function renderQuestion() {
-
     let q = questions[currentQuestionIndex];
-    console.log(q);
     var title = q.title;
-    console.log(title);
     question.textContent = title;
 
     var arr = q.choices;
-    console.log(arr);
     var rightAnswer = q.answer;
     var playersChoice = '';
 
@@ -60,7 +57,10 @@ function renderQuestion() {
     // choiceB.innerHTML = q.choiceB;
     // choiceC.innerHTML = q.choiceC;
     // choiceD.innerHTML = q.choiceD;
-
+    //I apologize there is a ton of extra uneeded code in here, I started the project and then I
+    //got confused by a lot of different things and then every time I tried to take out the extra 
+    //stuff it created a bug so I was afraid to take it out!
+    //So there is a lot of unnecessary things here.
     function progressRender() {
         for (let qIndex = 0; qIndex <= lastQuestionIndex; qIndex++) {
             progress.innerHTML += "<div class='prog' id=" + qIndex + "></div";
@@ -78,9 +78,7 @@ function renderQuestion() {
 
 function counterRender() {
     if (count <= questionTime) {
-        // counter.innerHTML = count;
-        // timeGauge.style.width = gaugeProgressUnit * count + "px";
-        count++;
+        
     } else {
         count = 0;
         answerIsWrong();
@@ -117,14 +115,12 @@ function checkAnswer(answer) {
 
 
 start.addEventListener('click', function () {
-    console.log('hello');
     renderQuestion();
     timer();
 
 });
 
 reset.addEventListener('click', function () {
-    console.log("reset button pressed")
 });
 
 
@@ -153,9 +149,9 @@ function setup() {
 
     timer.html(timeLeft - counter);
 
-    function timeIt () {
+    function timeIt() {
         counter++;
-        timer.html(timeLeft-counter);
+        timer.html(timeLeft - counter);
     }
 
     setInterval(timeIt, 1000);
