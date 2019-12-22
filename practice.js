@@ -46,7 +46,7 @@ function renderQuestion() {
         li.appendChild(button);
         choices.appendChild(li);
 
-        // need to fix something here....
+        // need to fix something here 
         button.addEventListener('click', function () {
             playersChoice = button.textContent;
             console.log(playersChoice);
