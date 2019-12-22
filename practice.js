@@ -35,7 +35,6 @@ function renderQuestion() {
 
     for (var i = 0; i < arr.length; i++) {
         var option = arr[i];
-        console.log(option);
 
         var button = document.createElement('button');
         var li = document.createElement('li');
@@ -43,7 +42,7 @@ function renderQuestion() {
         li.appendChild(button);
         choices.appendChild(li);
 
-        // need to fix something here 
+        // need to fix something here... Idk what happened! Help!
         button.addEventListener('click', function () {
             playersChoice = button.textContent;
             console.log(playersChoice);
@@ -61,6 +60,7 @@ function renderQuestion() {
     //got confused by a lot of different things and then every time I tried to take out the extra 
     //stuff it created a bug so I was afraid to take it out!
     //So there is a lot of unnecessary things here.
+    //Start unnecessary code here....
     function progressRender() {
         for (let qIndex = 0; qIndex <= lastQuestionIndex; qIndex++) {
             progress.innerHTML += "<div class='prog' id=" + qIndex + "></div";
@@ -112,8 +112,8 @@ function checkAnswer(answer) {
         scoreRender();
     }
 }
-
-
+//Until about here.....
+//Trying to get my buttons to work!
 start.addEventListener('click', function () {
     renderQuestion();
     timer();
@@ -122,9 +122,7 @@ start.addEventListener('click', function () {
 
 reset.addEventListener('click', function () {
 });
-
-
-
+//Hiding the stuff I didn't need to see when the quiz started
 function hideInstruction() {
     instruction.style.display = 'none';
 };
@@ -139,6 +137,7 @@ function showQuizPage() {
 function hideQuizPage() {
     quizpage.style.display = 'none';
 }
+//Trying to figure out how to start the timer.... I couldn't get it!
 var counter = 0;
 
 var timeLeft = 75;
