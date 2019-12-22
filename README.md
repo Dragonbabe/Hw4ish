@@ -12,18 +12,16 @@ As you open this file you will see instructions about starting a coding quiz. As
 A laptop or PC.
 
 ## Running the tests
+I found this project quite challenging, and it revealed to me some of the holes in my knowledge about javascript. I hope to contiue learning and experimenting as I continue through this class. I apologize for the broken code. I could not figure it out by the deadline.
 
 
 
 ## Built With
 
- * HTML+CSS+JAVASCRIPT
- *  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
- *  <link rel="stylesheet" href="style.css" /> \*<script src="script.js"></script>
+ *  1 whopping html file
+ *  Two javascript files
+ *  Bootstrap link
 
 ## Acknowledgments
 
-* Elrey
-* Dane
-* Spencer
-* For all of their help assisting me in understanding how coding works! :smile:
+* Richard helped me a lot with this homework and even stayed till the lights were shutting off in the building and we were all about to be locked out!! Even though his homework was already done :upside_down_face:
