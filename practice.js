@@ -94,14 +94,6 @@ function counterRender() {
     }
 }
 
-counterRender();
-let TIMER =
-    setInterval(counterRender, 1000);
-
-clearInterval(TIMER);
-
-
-let runningQuestionIndex = 0;
 
 
 
@@ -127,6 +119,7 @@ function checkAnswer(answer) {
 start.addEventListener('click', function () {
     console.log('hello');
     renderQuestion();
+    timer();
 
 });
 
@@ -149,4 +142,21 @@ function showQuizPage() {
 }
 function hideQuizPage() {
     quizpage.style.display = 'none';
+}
+var counter = 0;
+
+var timeLeft = 75;
+
+function setup() {
+
+    var timer = select('#timer');
+
+    timer.html(timeLeft - counter);
+
+    function timeIt () {
+        counter++;
+        timer.html(timeLeft-counter);
+    }
+
+    setInterval(timeIt, 1000);
 }

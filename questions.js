@@ -26,5 +26,5 @@ var questions = [
         title: "What element is a container for all the head elements, and may include the document title, scripts, styles, meta information, and more?",
         choices: ["<head></head>", "<body></body>", "<title></title>", "<br></br>"],
         answer: "<head></head>"
-    }
+    },
 ];
