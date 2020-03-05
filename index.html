@@ -8,42 +8,30 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
 </head>
 
 <body>
-    <header id ="header">
-        <a id="highscore">View Highscores</a>
+    <header id="header">
+        <a href="highscores.html">View Highscores</a>
         <div id="timer"></div>
     </header>
 
-    <div id="instruction">
+    <main>
         <h1>
             <bold>Coding Quiz!</bold>
         </h1>
         <p>Answer the following questions accurately and see how high of a core you can get! Answer incorrectly and
             there
             will be a time penalty! Click the "Start Quiz" button now! Do it!</p>
-    </div>
+        <button id="start">Start Quiz!</button>
+    </main>
 
 
 
-    <div id= "quizpage">
-        <h2 id="question">Quiz Time!</h2>
-        <ol id="choices">
-
-        </ol>
-    </div>
-
-
-    <div id="donemessage"></div>
-
-
-    <button id="start">Start Quiz!</button>
-    <button id="reset">RESET</button>
-
-
-    <script src="questions.js"></script>
-    <script src="practice.js"></script>
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/script.js"></script>
+    
 </body>
 
 </html>
