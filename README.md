@@ -7,6 +7,8 @@
 - [General info](#general-info)
 - [Technologies](#Technologies)
 - [Summary](#Summary)
+- [Author](#author)
+- [License](#license)
 
 ## General Info
 
